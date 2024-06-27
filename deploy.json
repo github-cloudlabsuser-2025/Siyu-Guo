@@ -5,7 +5,7 @@
   "parameters": {
     "webAppName": {
       "type": "string",
-      "defaultValue": "<your_app_name>",
+      "defaultValue": "WDCSiyu",
       "metadata": {
         "description": "Name of the web app."
       }
@@ -30,7 +30,7 @@
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2020-06-01",
       "name": "[variables('appServicePlanName')]",
-      "location": "[parameters('location')]",
+      "location": "Australia Central",
       "sku": "[variables('sku')]",
       "properties": {
         "reserved": false
@@ -40,7 +40,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2020-06-01",
       "name": "[parameters('webAppName')]",
-      "location": "[parameters('location')]",
+      "location": "Australia Central",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
       ],
